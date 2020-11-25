@@ -180,7 +180,9 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.nav_cart) {
             startActivity(new Intent(getApplicationContext(), CartActivity.class));
 
-        } else if (id == R.id.nav_orders) {
+        } else if (id == R.id.nav_search) {
+
+            startActivity(new Intent(getApplicationContext(), SearchProductsActivity.class));
 
         } else if (id == R.id.nav_categories) {
 
