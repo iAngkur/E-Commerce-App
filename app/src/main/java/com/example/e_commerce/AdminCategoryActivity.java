@@ -5,19 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class AdminCategoryActivity extends AppCompatActivity {
 
+    // Variables
     private ImageView tShirts, sportsTShirts, femaleDresses, sweaters;
     private ImageView glasses, hatsCaps, walletsBagsPurses, shoes;
     private ImageView headPhonesHandFree, Laptops, watches, mobilePhones;
+
+    private Button logoutBtn, checkNewOrdersBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
 
+        // Hooks
         tShirts = (ImageView) findViewById(R.id.t_shirts);
         sportsTShirts = (ImageView) findViewById(R.id.sports_t_shirts);
         femaleDresses = (ImageView) findViewById(R.id.female_dresses);
@@ -33,6 +38,26 @@ public class AdminCategoryActivity extends AppCompatActivity {
         watches = (ImageView) findViewById(R.id.watches);
         mobilePhones = (ImageView) findViewById(R.id.mobilephones);
 
+        logoutBtn = findViewById(R.id.admin_logout_btn);
+        checkNewOrdersBtn = findViewById(R.id.check_order_btn);
+
+        logoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        checkNewOrdersBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AdminCheckNewOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
 
         tShirts.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +125,6 @@ public class AdminCategoryActivity extends AppCompatActivity {
         });
 
 
-
         walletsBagsPurses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -121,7 +145,6 @@ public class AdminCategoryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
 
         headPhonesHandFree.setOnClickListener(new View.OnClickListener() {

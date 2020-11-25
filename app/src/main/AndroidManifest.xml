@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConfirmFinalOrderActivity"></activity>
+        <activity android:name=".AdminUserOrdersActivity"></activity>
+        <activity android:name=".AdminCheckNewOrdersActivity" />
+        <activity android:name=".ConfirmFinalOrderActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".ProductDetailsActivity" />
         <activity android:name=".SettingsActivity" />
