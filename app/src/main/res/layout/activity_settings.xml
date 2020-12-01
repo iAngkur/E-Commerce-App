@@ -107,4 +107,15 @@
         android:padding="10dp"
         />
 
+    <Button
+        android:id="@+id/security_questions_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings_address"
+        android:text="Set Security Questions"
+        android:layout_margin="15dp"
+        android:background="@drawable/buttons"
+        android:padding="10dp"
+        />
+
 </RelativeLayout>

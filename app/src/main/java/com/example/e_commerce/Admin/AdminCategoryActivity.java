@@ -1,4 +1,4 @@
-package com.example.e_commerce;
+package com.example.e_commerce.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.e_commerce.HomeActivity;
+import com.example.e_commerce.MainActivity;
+import com.example.e_commerce.R;
+
 public class AdminCategoryActivity extends AppCompatActivity {
 
     // Variables
@@ -15,7 +19,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
     private ImageView glasses, hatsCaps, walletsBagsPurses, shoes;
     private ImageView headPhonesHandFree, Laptops, watches, mobilePhones;
 
-    private Button logoutBtn, checkNewOrdersBtn;
+    private Button logoutBtn, checkNewOrdersBtn, maintainProductsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,16 @@ public class AdminCategoryActivity extends AppCompatActivity {
 
         logoutBtn = findViewById(R.id.admin_logout_btn);
         checkNewOrdersBtn = findViewById(R.id.check_order_btn);
+        maintainProductsBtn = findViewById(R.id.maintain_btn);
+
+        maintainProductsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                intent.putExtra("Admin", "Admin");
+                startActivity(intent);
+            }
+        });
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,4 +1,4 @@
-package com.example.e_commerce;
+package com.example.e_commerce.Admin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.e_commerce.Model.Cart;
+import com.example.e_commerce.R;
 import com.example.e_commerce.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

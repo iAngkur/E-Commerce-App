@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.e_commerce.Admin.AdminCategoryActivity;
 import com.example.e_commerce.Model.Users;
 import com.example.e_commerce.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
@@ -32,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText InputPhoneNumber, InputPassword;
     private Button LoginButton;
     private ProgressDialog loadingBar;
-    private TextView AdminLink, NotAdminLink;
+    private TextView AdminLink, NotAdminLink, forgetPassowrd;
 
     private String parentDbName = "Users";
     private CheckBox chkBoxRememberMe;
@@ -49,13 +50,23 @@ public class LoginActivity extends AppCompatActivity {
         InputPhoneNumber = (EditText) findViewById(R.id.login_phone_number_input);
         AdminLink = (TextView) findViewById(R.id.admin_panel_link);
         NotAdminLink = (TextView) findViewById(R.id.not_admin_panel_link);
+        forgetPassowrd = findViewById(R.id.forget_password_link);
         loadingBar = new ProgressDialog(this);
+
 
         chkBoxRememberMe = (CheckBox) findViewById(R.id.remember_me_chkb);
 
         // PaperDB Library used to remember user's phone & password
         Paper.init(this);
 
+        forgetPassowrd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ResetPasswordActivity.class);
+                intent.putExtra("check", "login");
+                startActivity(intent);
+            }
+        });
 
         // User Login
         LoginButton.setOnClickListener(new View.OnClickListener() {
