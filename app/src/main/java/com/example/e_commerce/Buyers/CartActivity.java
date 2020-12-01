@@ -1,4 +1,4 @@
-package com.example.e_commerce;
+package com.example.e_commerce.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.e_commerce.Model.Cart;
 import com.example.e_commerce.Prevalent.Prevalent;
+import com.example.e_commerce.R;
 import com.example.e_commerce.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

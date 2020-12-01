@@ -1,4 +1,4 @@
-package com.example.e_commerce;
+package com.example.e_commerce.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.e_commerce.Admin.AdminCategoryActivity;
 import com.example.e_commerce.Model.Users;
 import com.example.e_commerce.Prevalent.Prevalent;
+import com.example.e_commerce.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

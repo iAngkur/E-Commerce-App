@@ -1,4 +1,4 @@
-package com.example.e_commerce;
+package com.example.e_commerce.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,10 +10,13 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.e_commerce.Model.Users;
 import com.example.e_commerce.Prevalent.Prevalent;
+import com.example.e_commerce.R;
+import com.example.e_commerce.Selllers.SellerRegistrationActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,8 +28,10 @@ import io.paperdb.Paper;
 public class MainActivity extends AppCompatActivity {
 
     // Variables
-    private Button joinNowButton, loginButton;
+    Button joinNowButton, loginButton;
     private ProgressDialog loadingBar;
+
+    TextView sellerBegin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +40,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Hooks
-        joinNowButton = (Button) findViewById(R.id.main_join_now_btn);
-        loginButton = (Button) findViewById(R.id.main_login_btn);
-        loadingBar = new ProgressDialog(this);
+        joinNowButton = findViewById(R.id.main_join_now_btn);
+        loginButton = findViewById(R.id.main_login_btn);
+        sellerBegin = findViewById(R.id.seller_begin);
 
+        loadingBar = new ProgressDialog(this);
 
         Paper.init(this);
 
@@ -58,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        // Go to Welcome Screen to Login Screen
+        sellerBegin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SellerRegistrationActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Go to Welcome Screen to Login Screen
         loginButton.setOnClickListener(new View.OnClickListener() {
