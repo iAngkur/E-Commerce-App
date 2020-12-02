@@ -22,7 +22,7 @@
         android:layout_below="@id/img_seller"
         android:layout_marginTop="20dp"
         android:textSize="24sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/baloo"
         android:textColor="@color/colorPrimaryDark"/>
 
 
@@ -59,11 +59,11 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/buttons"
         android:text="Login"
         android:textColor="@android:color/white"
         android:textAllCaps="false"
-        android:textSize="18sp"/>
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/seller_dont_have_account_btn"

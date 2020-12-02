@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_register"
+    android:background="#EAE6E6"
     tools:context=".Buyers.RegisterActivity">
 
-    <ImageView
+    <TextView
         android:id="@+id/register_applogo"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:src="@drawable/applogo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="240dp"
-        android:layout_marginBottom="30dp"
-        />
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:text="Register"
+        android:textSize="50sp" />
 
     <EditText
         android:id="@+id/register_username_input"
@@ -26,10 +27,11 @@
         android:padding="20dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
         android:hint="Name"
         android:inputType="text"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
         android:textSize="19sp"
         />
 
@@ -44,10 +46,10 @@
         android:layout_marginRight="15dp"
         android:hint="Phone Number"
         android:inputType="number"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
         android:textSize="19sp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         />
 
 
@@ -60,11 +62,11 @@
         android:padding="20dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="10dp"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
         android:textSize="19sp"
         />
 
@@ -74,13 +76,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_password_input"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/buttons"
         android:padding="17dp"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:text="Create Account"
         android:textColor="@android:color/white"
         />

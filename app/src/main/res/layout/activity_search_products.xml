@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:padding="10dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:layout_alignParentTop="true">
 
         <EditText
@@ -21,26 +21,29 @@
             android:layout_height="match_parent"
             android:hint="Product Name"
             android:textSize="15sp"
-            android:background="@android:color/white"
+            android:background="@drawable/input_design_white"
             android:padding="10dp"
+            android:textColor="@android:color/black"
             android:textColorHint="@android:color/tertiary_text_dark" />
 
         <Button
             android:id="@+id/search_btn"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Search"
+            android:layout_centerInParent="true"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold"
             android:elevation="5dp"
-            android:background="#AA6602"
+            android:background="@drawable/buttons"
             android:layout_toRightOf="@id/search_product_name"/>
 
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/search_list"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/r4_11"/>

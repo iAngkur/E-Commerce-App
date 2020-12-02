@@ -1,6 +1,7 @@
 package com.example.e_commerce.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,11 +16,11 @@ import com.example.e_commerce.R;
 public class AdminCategoryActivity extends AppCompatActivity {
 
     // Variables
-    private ImageView tShirts, sportsTShirts, femaleDresses, sweaters;
-    private ImageView glasses, hatsCaps, walletsBagsPurses, shoes;
-    private ImageView headPhonesHandFree, Laptops, watches, mobilePhones;
+    CardView tShirts, sportsTShirts, femaleDresses, sweaters;
+    CardView glasses, hatsCaps, walletsBagsPurses, shoes;
+    CardView headPhonesHandFree, Laptops, watches, mobilePhones;
 
-    private Button logoutBtn, checkNewOrdersBtn, maintainProductsBtn;
+    Button logoutBtn, checkNewOrdersBtn, maintainProductsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,20 +28,21 @@ public class AdminCategoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin_category);
 
         // Hooks
-        tShirts = (ImageView) findViewById(R.id.t_shirts);
-        sportsTShirts = (ImageView) findViewById(R.id.sports_t_shirts);
-        femaleDresses = (ImageView) findViewById(R.id.female_dresses);
-        sweaters = (ImageView) findViewById(R.id.sweaters);
+        tShirts = findViewById(R.id.t_shirt);
+        sportsTShirts =  findViewById(R.id.jersey);
+        femaleDresses =  findViewById(R.id.female_dress);
+        sweaters =  findViewById(R.id.sweater);
 
-        glasses = (ImageView) findViewById(R.id.glasses);
-        hatsCaps = (ImageView) findViewById(R.id.hats_caps);
-        walletsBagsPurses = (ImageView) findViewById(R.id.purses_bags_wallets);
-        shoes = (ImageView) findViewById(R.id.shoes);
+        glasses = findViewById(R.id.glass);
+        hatsCaps =  findViewById(R.id.hat);
+        walletsBagsPurses =  findViewById(R.id.purse_bag);
+        shoes = findViewById(R.id.shoes);
 
-        headPhonesHandFree = (ImageView) findViewById(R.id.headphones_handfree);
-        Laptops = (ImageView) findViewById(R.id.laptop_pc);
-        watches = (ImageView) findViewById(R.id.watches);
-        mobilePhones = (ImageView) findViewById(R.id.mobilephones);
+        headPhonesHandFree =  findViewById(R.id.headphone);
+        Laptops =  findViewById(R.id.laptop);
+        watches =  findViewById(R.id.watch);
+        mobilePhones =  findViewById(R.id.phone);
+
 
         logoutBtn = findViewById(R.id.admin_logout_btn);
         checkNewOrdersBtn = findViewById(R.id.check_order_btn);

@@ -27,6 +27,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/orders_list"
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/r2_11" />

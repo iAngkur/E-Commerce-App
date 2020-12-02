@@ -4,76 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/welcome"
+    android:background="@color/colorPrimary"
     tools:context=".Buyers.MainActivity">
 
-    <ImageView
-    android:id="@+id/app_logo"
-    android:layout_width="300dp"
-    android:layout_height="100dp"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="60dp"
-    android:src="@drawable/applogo" />
+    <TextView
+        android:id="@+id/app_logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="eShop"
+        android:fontFamily="@font/baloo"
+        android:textSize="50sp"
+        android:textColor="@android:color/black"/>
+
 
     <TextView
         android:id="@+id/app_slogan"
-        android:layout_width="248dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="80dp"
-        android:layout_marginTop="142dp"
-        android:text="Find, Discover, Choose and Buy anything online."
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="9dp"
+        android:text="Find, Discover, Choose and\n Buy anything online."
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="25sp"
-        android:textStyle="italic"
-        />
+        android:textSize="20sp" />
+
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/black"
+        android:layout_below="@id/app_slogan"
+        android:layout_marginTop="20dp"/>
 
 
     <Button
         android:id="@+id/main_join_now_btn"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/main_login_btn"
-        android:layout_marginBottom="5dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/input_design"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/buttons"
+        android:layout_below="@id/main_login_btn"
         android:padding="20dp"
-        android:textAllCaps="false"
-        android:textSize="18sp"
         android:text="Join Now"
+        android:textAllCaps="false"
+        android:fontFamily="@font/baloo"
         android:textColor="@android:color/white"
-        />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/main_login_btn"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_above="@id/seller_begin"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
         android:background="@drawable/buttons"
         android:padding="20dp"
+        android:text="Login"
         android:textAllCaps="false"
-        android:textSize="18sp"
-        android:text="Already have an Account? Login"
+        android:fontFamily="@font/baloo"
         android:textColor="@android:color/white"
-        />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/seller_begin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wants to become a Seller"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="10dp"/>
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Wants to become a Seller"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
